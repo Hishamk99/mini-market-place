@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_nft_marketplace_app/core/resources/asset_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 
@@ -13,13 +14,13 @@ class SplashPage extends StatelessWidget {
         body: Stack(
           children: [
             Image.asset(
-              'assets/images/splash_image.jpg',
+              Images.kSplashImage,
               height: double.infinity,
+              width: double.infinity,
               fit: BoxFit.cover,
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 35),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 35),
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
