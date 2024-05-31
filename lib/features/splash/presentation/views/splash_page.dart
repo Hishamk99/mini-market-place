@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
+import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -21,26 +23,18 @@ class SplashPage extends StatelessWidget {
               ],
             ),
           ),
-          child: const Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Welcome to',
+                StringsManager.kWelcome,
                 textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
+                style: Stylse.style36,
               ),
               Text(
-                'NFT Marketplace',
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
+                StringsManager.kNFT,
+                style: Stylse.style36,
               ),
             ],
           ),
