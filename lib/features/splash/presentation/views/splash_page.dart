@@ -10,34 +10,34 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xff5C609B),
-                Color(0xff767CB2),
-                Color(0xffB6BDD0),
-                //  Color(0xffAEB4CA),
-              ],
+        body: Stack(
+          children: [
+            Image.asset(
+              'assets/images/splash_image.jpg',
+              height: double.infinity,
+              fit: BoxFit.cover,
             ),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                StringsManager.kWelcome,
-                textAlign: TextAlign.start,
-                style: Stylse.style36,
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 35),
+              child: Column(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    StringsManager.kWelcome,
+                    textAlign: TextAlign.center,
+                    style: Stylse.style36,
+                  ),
+                  Text(
+                    StringsManager.kNFT,
+                    textAlign: TextAlign.center,
+                    style: Stylse.style36,
+                  ),
+                ],
               ),
-              Text(
-                StringsManager.kNFT,
-                style: Stylse.style36,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
