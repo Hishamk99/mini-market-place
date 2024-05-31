@@ -14,7 +14,7 @@ class Styles {
         fontFamily: 'SF Pro Display',
     );  
     static TextStyle style12 = const TextStyle(
-        color : Colors.white,
+        color : Color(0xffEBEBF5),
         fontSize : 12,
         fontWeight: FontWeight.w400,
         fontFamily: 'SF Pro Display',

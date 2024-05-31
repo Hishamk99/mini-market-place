@@ -15,13 +15,23 @@ class CustomCard extends StatelessWidget {
         color: Colors.red,
         width: double.infinity,
         height: 200,
-        child: Column(
-          children: [
-            Text(
-              StringsManager.kTextSplashCard,
-              style: Styles.style20,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50 , vertical: 20),
+          child: Column(
+            children: [
+              Text(
+                StringsManager.kTextSplashCard,
+                style: Styles.style20,
+              ),
+              const SizedBox(height : 5),
+              Text(
+                StringsManager.kTextSplashSubtitleCard,
+                textAlign: TextAlign.center,
+                style: Styles.style12,
+              ),
+              const Spacer(),
+            ],
+          ),
         ),
       ),
     );
