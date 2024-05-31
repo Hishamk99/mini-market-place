@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'features/splash/presentation/views/splash_page.dart';
+
 void main() {
   runApp(const MiniMarketPlaceApp());
 }
@@ -11,7 +13,10 @@ class MiniMarketPlaceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      routes: {
+        
+      },
+      home: SplashPage(),
     );
   }
 }
