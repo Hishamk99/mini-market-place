@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.onPressed});
@@ -24,14 +25,9 @@ class CustomButton extends StatelessWidget {
               ),
             ),
             onPressed: onPressed,
-            child: const Text(
+            child: Text(
               'Get started now',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontFamily: 'SF Pro Display',
-                fontWeight: FontWeight.bold,
-              ),
+              style: Styles.style18,
             ),
           ),
         ),

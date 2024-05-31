@@ -20,4 +20,11 @@ class Styles {
     fontWeight: FontWeight.w400,
     fontFamily: 'SF Pro Display',
   );
+
+  static TextStyle style18 = const TextStyle(
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: 'SF Pro Display',
+    fontWeight: FontWeight.bold,
+  );
 }
