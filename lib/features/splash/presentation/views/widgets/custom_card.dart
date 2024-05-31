@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 
+import 'custom_button.dart';
+
 class CustomCard extends StatelessWidget {
   const CustomCard({
     super.key,
@@ -14,8 +16,8 @@ class CustomCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(27),
       child: BackdropFilter(
         filter: ImageFilter.blur(
-          sigmaX: 5,
-          sigmaY: 5,
+          sigmaX: 10,
+          sigmaY: 10,
         ),
         child: Container(
           color: Colors.white.withOpacity(.1),
@@ -36,6 +38,9 @@ class CustomCard extends StatelessWidget {
                   style: Styles.style12,
                 ),
                 const Spacer(),
+                CustomButton(
+                  onPressed: () {},
+                ),
               ],
             ),
           ),
@@ -44,3 +49,5 @@ class CustomCard extends StatelessWidget {
     );
   }
 }
+
+
