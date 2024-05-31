@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/asset_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
+import 'widgets/custom_card.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -22,19 +23,20 @@ class SplashPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 35),
               child: Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     StringsManager.kWelcome,
                     textAlign: TextAlign.center,
-                    style: Stylse.style36,
+                    style: Styles.style36,
                   ),
                   Text(
                     StringsManager.kNFT,
                     textAlign: TextAlign.center,
-                    style: Stylse.style36,
+                    style: Styles.style36,
                   ),
+                  const Spacer(),
+                  const CustomCard(),
                 ],
               ),
             ),
@@ -44,3 +46,4 @@ class SplashPage extends StatelessWidget {
     );
   }
 }
+
