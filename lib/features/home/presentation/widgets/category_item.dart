@@ -17,7 +17,9 @@ class CategoryImageItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(27),
             child: Image.asset(
-              'assets/images/art.png',
+              'assets/images/music.jpg',
+              width: 252,
+              fit: BoxFit.fill,
             ),
           ),
           Positioned(
@@ -29,7 +31,7 @@ class CategoryImageItem extends StatelessWidget {
                 bottomRight: Radius.circular(27),
               ),
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+                filter: ImageFilter.blur(sigmaX: 1, sigmaY: 3),
                 child: Container(
                   width: 252,
                   height: 54,
@@ -40,7 +42,7 @@ class CategoryImageItem extends StatelessWidget {
                       end: Alignment.bottomCenter,
                       colors: [
                         const Color(0xff000000).withOpacity(0),
-                        const Color(0xff000000).withOpacity(.5),
+                        const Color(0xff000000).withOpacity(.45),
                       ],
                     ),
                   ),

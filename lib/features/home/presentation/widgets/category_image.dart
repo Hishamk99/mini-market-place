@@ -8,7 +8,18 @@ class CategoryImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CategoryImageItem();
+    return SizedBox(
+      height: 167.5,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 4.5),
+            child: CategoryImageItem(),
+          );
+        },
+      ),
+    );
   }
 }
-
