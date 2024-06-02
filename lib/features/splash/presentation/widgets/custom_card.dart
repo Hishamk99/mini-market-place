@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
+import 'package:mini_nft_marketplace_app/features/home/presentation/views/home_page.dart';
 
 import 'custom_button.dart';
 
@@ -39,7 +40,9 @@ class CustomCard extends StatelessWidget {
                 ),
                 const Spacer(),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, HomePage.id);
+                  },
                 ),
               ],
             ),
@@ -49,5 +52,3 @@ class CustomCard extends StatelessWidget {
     );
   }
 }
-
-

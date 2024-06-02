@@ -27,4 +27,11 @@ class Styles {
     fontFamily: 'SF Pro Display',
     fontWeight: FontWeight.bold,
   );
+  static TextStyle style25 = const TextStyle(
+    color: Colors.white,
+    fontSize: 25,
+    fontFamily: 'SF Pro Display',
+    fontWeight: FontWeight.w700,
+  );
+ 
 }
