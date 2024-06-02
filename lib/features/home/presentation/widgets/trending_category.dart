@@ -2,10 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
+import 'package:mini_nft_marketplace_app/features/home/model/trending_collection_model.dart';
 
 class TrendingCategory extends StatelessWidget {
-  const TrendingCategory({super.key});
-
+  const TrendingCategory({super.key, required this.trendingCollectionModel});
+  final TrendingCollectionModel trendingCollectionModel;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -24,7 +25,7 @@ class TrendingCategory extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: Image.asset(
-                  'assets/images/trending1.png',
+                  trendingCollectionModel.image,
                   width: 139.6,
                   height: 139.6,
                 ),
@@ -35,19 +36,21 @@ class TrendingCategory extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '3D Art',
+                      trendingCollectionModel.title,
                       style: Styles.style12W600,
                     ),
                     Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.favorite,
-                          color: Colors.red,
+                          color: trendingCollectionModel.active
+                              ? Colors.red
+                              : Colors.black,
                           size: 16,
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          '200',
+                          trendingCollectionModel.count,
                           style: Styles.style12,
                         ),
                       ],
