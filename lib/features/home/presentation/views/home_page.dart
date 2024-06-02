@@ -4,7 +4,7 @@ import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/category_image.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/custom_trending_collection_text.dart';
-import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/trending_category.dart';
+import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/trending_category_list_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(height: 27),
                 CustomTrendingCollectionText(),
                 SizedBox(height: 16),
-                TrendingCategory(),
+                TrendingCategoryListView(),
               ],
             ),
           ),
@@ -40,4 +40,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
