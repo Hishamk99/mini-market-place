@@ -32,3 +32,4 @@ class CategoryImage extends StatelessWidget {
     );
   }
 }
+

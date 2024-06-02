@@ -4,6 +4,7 @@ import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/category_image.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/custom_trending_collection_text.dart';
+import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/trending_category.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,14 +24,14 @@ class HomePage extends StatelessWidget {
             backgroundColor: Colors.transparent,
           ),
           body: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: EdgeInsets.symmetric(horizontal: 14),
             child: Column(
               children: [
                 CategoryImage(),
-                SizedBox(
-                  height: 16,
-                ),
+                SizedBox(height: 27),
                 CustomTrendingCollectionText(),
+                SizedBox(height: 16),
+                TrendingCategory(),
               ],
             ),
           ),
@@ -39,3 +40,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
