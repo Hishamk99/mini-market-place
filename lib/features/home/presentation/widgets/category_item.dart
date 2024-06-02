@@ -1,12 +1,13 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
+import 'package:mini_nft_marketplace_app/features/home/model/category_model.dart';
 
 class CategoryImageItem extends StatelessWidget {
   const CategoryImageItem({
-    super.key,
+    super.key, required this.categoryModel,
   });
-
+  final CategoryModel categoryModel;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -17,7 +18,7 @@ class CategoryImageItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(27),
             child: Image.asset(
-              'assets/images/music.jpg',
+             categoryModel.image,
               width: 252,
               fit: BoxFit.fill,
             ),
@@ -47,7 +48,7 @@ class CategoryImageItem extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    'Art',
+                    categoryModel.title,
                     textAlign: TextAlign.center,
                     style: Styles.style20,
                   ),
