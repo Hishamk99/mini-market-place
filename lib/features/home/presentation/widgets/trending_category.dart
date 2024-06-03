@@ -45,7 +45,7 @@ class TrendingCategory extends StatelessWidget {
                           Icons.favorite,
                           color: trendingCollectionModel.active
                               ? Colors.red
-                              : Colors.black,
+                              : Colors.grey,
                           size: 16,
                         ),
                         const SizedBox(width: 5),
