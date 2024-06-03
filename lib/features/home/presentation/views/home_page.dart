@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_nft_marketplace_app/constant.dart';
 import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
@@ -38,31 +39,35 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               color: Colors.white.withOpacity(.1),
               height: 90,
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Icon(
+                    Icons.home,
+                    size: 39,
+                    color: Colors.white,
+                  ),
+                  Icon(
+                    FontAwesomeIcons.chartSimple,
+                    size: 39,
+                    color: Colors.white,
+                  ),
+                  SizedBox(width: 39),
+                  Icon(
+                    Icons.search,
+                    size: 39,
+                    color: Colors.white,
+                  ),
+                  Icon(
+                    Icons.person,
+                    size: 39,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-        // bottomNavigationBar: BottomNavigationBar(
-        //   onTap: (value) {
-        //     index = value;
-        //     setState(() {});
-        //   },
-        //   currentIndex: index,
-        //   selectedItemColor: Colors.red,
-        //   items: const [
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.home),
-        //       label: 'home',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.search),
-        //       label: 'search',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.person),
-        //       label: 'person',
-        //     )
-        //   ],
-        // ),
         backgroundColor: kPrimaryColor,
         appBar: AppBar(
           title: Text(
