@@ -1,11 +1,15 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
+import 'package:mini_nft_marketplace_app/features/home/model/top_seller_model.dart';
 
 class TopSellerCategoryItem extends StatelessWidget {
   const TopSellerCategoryItem({
     super.key,
+    required this.topSellerModel,
   });
+
+  final TopSellerModel topSellerModel;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +29,7 @@ class TopSellerCategoryItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: Image.asset(
-                  'assets/images/topSeller1.png',
+                  topSellerModel.image,
                   width: 139.6,
                   height: 139.6,
                 ),
@@ -35,7 +39,7 @@ class TopSellerCategoryItem extends StatelessWidget {
                 children: [
                   const SizedBox(width: 10),
                   Text(
-                    'Abstract Pink',
+                    topSellerModel.title,
                     style: Styles.style12W600,
                   ),
                 ],
@@ -46,7 +50,7 @@ class TopSellerCategoryItem extends StatelessWidget {
                 children: [
                   const SizedBox(width: 10),
                   Text(
-                    'abstract #2384',
+                    topSellerModel.subTitle,
                     style: Styles.style12W600.copyWith(
                       color: Colors.grey,
                       fontWeight: FontWeight.w500,
@@ -77,14 +81,14 @@ class TopSellerCategoryItem extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.favorite,
-                          color: Colors.red,
+                          color: topSellerModel.active ? Colors.red : null,
                           size: 16,
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          '200',
+                          topSellerModel.count.toString(),
                           style: Styles.style12,
                         ),
                       ],
