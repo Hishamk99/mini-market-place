@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'top_seller_category_item.dart';
 
 class TopSellerCategoryListViews extends StatelessWidget {
