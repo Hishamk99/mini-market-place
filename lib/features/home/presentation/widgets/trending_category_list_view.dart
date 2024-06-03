@@ -16,15 +16,21 @@ class TrendingCategoryListView extends StatelessWidget {
         title: '3D Art',
       ),
       TrendingCollectionModel(
-        count: '200',
+        count: '500',
         active: false,
         image: 'assets/images/trending2.png',
         title: 'Abstract Art',
       ),
       TrendingCollectionModel(
-        count: '200',
+        count: '100',
         active: true,
         image: 'assets/images/trending3.png',
+        title: 'Portrait Art',
+      ),
+      TrendingCollectionModel(
+        count: '300',
+        active: false,
+        image: 'assets/images/trending4.png',
         title: 'Portrait Art',
       ),
     ];

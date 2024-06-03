@@ -41,7 +41,7 @@ class CustomCard extends StatelessWidget {
                 const Spacer(),
                 CustomButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, HomePage.id);
+                    Navigator.pushReplacementNamed(context, HomePage.id);
                   },
                 ),
               ],
