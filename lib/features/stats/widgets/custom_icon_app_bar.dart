@@ -31,6 +31,7 @@ class CustomIconAppBar extends StatelessWidget {
         child: const Icon(
           Icons.more_horiz_rounded,
           color: Colors.white,
+          size: 20,
         ),
       ),
     );

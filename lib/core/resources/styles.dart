@@ -34,19 +34,23 @@ class Styles {
     fontWeight: FontWeight.w700,
   );
 
-
- static TextStyle style12W600 = const TextStyle(
+  static TextStyle style12W600 = const TextStyle(
     color: Colors.white,
     fontSize: 12,
     fontFamily: 'SF Pro Display',
     fontWeight: FontWeight.w600,
   );
-  
- static TextStyle style13 = const TextStyle(
+
+  static TextStyle style13 = const TextStyle(
     color: Colors.white,
     fontSize: 13,
     fontFamily: 'SF Pro Display',
     fontWeight: FontWeight.w400,
   );
+  static TextStyle style15 = const TextStyle(
+    color: Colors.white,
+    fontSize: 13,
+    fontFamily: 'SF Pro Display',
+    fontWeight: FontWeight.w600,
+  );
 }
-
