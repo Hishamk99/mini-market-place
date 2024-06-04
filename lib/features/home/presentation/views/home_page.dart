@@ -5,6 +5,7 @@ import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/custom_bottom_navigation_bar.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/home_body.dart';
 import 'package:mini_nft_marketplace_app/features/stats/views/state_page.dart';
+import 'package:mini_nft_marketplace_app/features/stats/widgets/custom_icon_app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,7 +41,11 @@ class _HomePageState extends State<HomePage> {
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
-          actions: index == 0 ? null : const [],
+          actions: index == 0
+              ? null
+              : [
+                  const CustomIconAppBar(),
+                ],
         ),
         body: widgetList[index],
       ),
