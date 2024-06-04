@@ -1,13 +1,15 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NavigationBarItems extends StatelessWidget {
   const NavigationBarItems({
     super.key,
+    required this.onPressedStatics,
+    required this.onPressedHome,
   });
-
+  final void Function()? onPressedStatics;
+  final void Function()? onPressedHome;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -23,26 +25,32 @@ class NavigationBarItems extends StatelessWidget {
         child: Container(
           color: Colors.white.withOpacity(.1),
           height: 80,
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Icon(
-                Icons.home,
-                size: 39,
-                color: Colors.white,
+              IconButton(
+                onPressed: onPressedHome,
+                icon: const Icon(
+                  Icons.home,
+                  size: 39,
+                  color: Colors.white,
+                ),
               ),
-              Icon(
-                FontAwesomeIcons.chartSimple,
-                size: 39,
-                color: Colors.white,
+              IconButton(
+                onPressed: onPressedStatics,
+                icon: const Icon(
+                  FontAwesomeIcons.chartSimple,
+                  size: 39,
+                  color: Colors.white,
+                ),
               ),
-              SizedBox(width: 39),
-              Icon(
+              const SizedBox(width: 39),
+              const Icon(
                 Icons.search,
                 size: 39,
                 color: Colors.white,
               ),
-              Icon(
+              const Icon(
                 Icons.person_2_outlined,
                 size: 39,
                 color: Colors.white,

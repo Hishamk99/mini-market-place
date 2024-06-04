@@ -2,24 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/constant.dart';
 import 'package:mini_nft_marketplace_app/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
-import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/category_image.dart';
 import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/custom_bottom_navigation_bar.dart';
-import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/custom_trending_collection_text.dart';
-import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/custom_top_seller_text.dart';
-import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/top_seller_category_list_view.dart';
-import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/trending_category_list_view.dart';
+import 'package:mini_nft_marketplace_app/features/home/presentation/widgets/home_body.dart';
+import 'package:mini_nft_marketplace_app/features/stats/views/state_page.dart';
 
-
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
   static String id = 'HomePage';
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Widget body = const HomeBody();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         extendBody: true,
-        bottomNavigationBar: const CustomBottomNavigationBar(),
+        bottomNavigationBar: CustomBottomNavigationBar(
+          onPressedStatics: () {
+            setState(() {
+              body = const StatePage();
+            });
+          },
+          onPressedHome: () {
+            setState(() {
+              body = const HomeBody();
+            });
+          },
+        ),
         backgroundColor: kPrimaryColor,
         appBar: AppBar(
           title: Text(
@@ -29,27 +42,8 @@ class HomePage extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.transparent,
         ),
-        body: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 14),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                CategoryImage(),
-                SizedBox(height: 27),
-                CustomTrendingCollectionText(),
-                SizedBox(height: 16),
-                TrendingCategoryListView(),
-                SizedBox(height: 27),
-                CustomTopSellerText(),
-                SizedBox(height: 7),
-                TopSellerCategoryListViews(),
-                SizedBox(height: 110),
-              ],
-            ),
-          ),
-        ),
+        body: body,
       ),
     );
   }
 }
-

@@ -10,9 +10,10 @@ class NavigationBarAddItem extends StatelessWidget {
     return Container(
       width: 70,
       height: 70,
-      decoration: const ShapeDecoration(
-        color: Color(0xffF7DFF0),
-        shape: StarBorder.polygon(
+      decoration: ShapeDecoration(
+        //color: Color(0xffF7DFF0),
+        color: Colors.white.withOpacity(.2),
+        shape: const StarBorder.polygon(
           pointRounding: .5,
           sides: 6,
         ),
