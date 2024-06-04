@@ -5,10 +5,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class NavigationBarItems extends StatelessWidget {
   const NavigationBarItems({
     super.key,
-    required this.onPressedStatics,
+    required this.onPressedStats,
     required this.onPressedHome,
   });
-  final void Function()? onPressedStatics;
+  final void Function()? onPressedStats;
   final void Function()? onPressedHome;
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class NavigationBarItems extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: onPressedStatics,
+                onPressed: onPressedStats,
                 icon: const Icon(
                   FontAwesomeIcons.chartSimple,
                   size: 39,

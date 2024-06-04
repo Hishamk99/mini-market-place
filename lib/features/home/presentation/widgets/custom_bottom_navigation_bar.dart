@@ -5,10 +5,10 @@ import 'navigation_bar_items.dart';
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({
     super.key,
-    required this.onPressedStatics,
+    required this.onPressedStats,
     required this.onPressedHome,
   });
-  final void Function()? onPressedStatics;
+  final void Function()? onPressedStats;
   final void Function()? onPressedHome;
 
   @override
@@ -24,7 +24,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             left: 0,
             right: 0,
             child: NavigationBarItems(
-              onPressedStatics: onPressedStatics,
+              onPressedStats: onPressedStats,
               onPressedHome: onPressedHome,
             ),
           ),

@@ -15,34 +15,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Widget body = const HomeBody();
+  List<Widget> widgetList = [const HomeBody(), const StatsPage()];
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         extendBody: true,
         bottomNavigationBar: CustomBottomNavigationBar(
-          onPressedStatics: () {
-            setState(() {
-              body = const StatePage();
-            });
+          onPressedStats: () {
+            index = 1;
+            setState(() {});
           },
           onPressedHome: () {
-            setState(() {
-              body = const HomeBody();
-            });
+            index = 0;
+            setState(() {});
           },
         ),
         backgroundColor: kPrimaryColor,
         appBar: AppBar(
           title: Text(
-            StringsManager.kTitleHomePage,
+            index == 0 ? StringsManager.kTitleHomePage : 'Stats',
             style: Styles.style25,
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
+          actions: index == 0 ? null : const [],
         ),
-        body: body,
+        body: widgetList[index],
       ),
     );
   }

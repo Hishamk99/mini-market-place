@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'category_image.dart';
 import 'custom_top_seller_text.dart';
 import 'custom_trending_collection_text.dart';
