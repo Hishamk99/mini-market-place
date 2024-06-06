@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_nft_marketplace_app/features/stats/widgets/custom_all_category.dart';
 import 'package:mini_nft_marketplace_app/features/stats/widgets/custom_ranking_and_activity.dart';
 
 class StatsPage extends StatelessWidget {
@@ -9,8 +10,8 @@ class StatsPage extends StatelessWidget {
     return const Column(
       children: [
         CustomRankingAndActivity(),
+        CustomAllCategory(),
       ],
     );
   }
 }
-

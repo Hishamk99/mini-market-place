@@ -53,4 +53,10 @@ class Styles {
     fontFamily: 'SF Pro Display',
     fontWeight: FontWeight.w600,
   );
+  static TextStyle style14W400 = const TextStyle(
+    color: Colors.white,
+    fontSize: 14,
+    fontFamily: 'SF Pro Display',
+    fontWeight: FontWeight.w400,
+  );
 }

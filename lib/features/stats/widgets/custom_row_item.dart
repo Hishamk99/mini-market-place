@@ -18,8 +18,9 @@ class CustomRowItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 100,
+        width: 110,
         decoration: BoxDecoration(
+          
           border: Border(
             bottom: BorderSide(
               color: color,
