@@ -49,7 +49,7 @@ class Styles {
   );
   static TextStyle style15 = const TextStyle(
     color: Colors.white,
-    fontSize: 13,
+    fontSize: 15,
     fontFamily: 'SF Pro Display',
     fontWeight: FontWeight.w600,
   );

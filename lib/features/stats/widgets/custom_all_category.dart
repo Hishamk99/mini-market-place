@@ -15,12 +15,13 @@ class CustomAllCategory extends StatelessWidget {
       children: [
         AllStatsItem(
           title: 'All categories',
-          icon: Icons.arrow_drop_down_outlined,
+          icon: Icons.border_all_rounded,
         ),
         AllStatsItem(
           title: 'All categories',
           icon: FontAwesomeIcons.link,
-          size: 15,
+          size: 12,
+          //size: 15,
         ),
       ],
     );

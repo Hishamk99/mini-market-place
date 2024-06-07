@@ -6,7 +6,7 @@ class AllStatsItem extends StatelessWidget {
     super.key,
     required this.title,
     required this.icon,
-    this.size = 25,
+    this.size = 16,
   });
   final String title;
   final IconData icon;
@@ -32,11 +32,12 @@ class AllStatsItem extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(
-                  Icons.border_all_rounded,
+                Icon(
+                  icon,
                   color: Colors.grey,
-                  size: 18,
+                  size: size,
                 ),
+                const SizedBox(width: 7),
                 Text(
                   title,
                   style: Styles.style14W400,
@@ -45,10 +46,9 @@ class AllStatsItem extends StatelessWidget {
                   child: IconButton(
                     padding: EdgeInsets.zero,
                     onPressed: () {},
-                    icon: Icon(
-                      icon,
+                    icon: const Icon(
+                      Icons.arrow_drop_down_outlined,
                       color: Colors.grey,
-                      size: size,
                     ),
                   ),
                 ),
