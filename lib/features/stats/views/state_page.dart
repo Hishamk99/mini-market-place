@@ -1,93 +1,63 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
 import 'package:mini_nft_marketplace_app/features/stats/widgets/custom_all_category.dart';
 import 'package:mini_nft_marketplace_app/features/stats/widgets/custom_ranking_and_activity.dart';
+import 'package:mini_nft_marketplace_app/features/stats/widgets/custom_ranking_category_item.dart';
 
 class StatsPage extends StatelessWidget {
   const StatsPage({super.key});
   static String id = 'StatePage';
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
+    return ListView(
+      children: const [
         CustomRankingAndActivity(),
         CustomAllCategory(),
-        CustomRankingCategoryItem()
+        RankingBox(),
       ],
     );
   }
 }
 
-class CustomRankingCategoryItem extends StatelessWidget {
-  const CustomRankingCategoryItem({
+class RankingBox extends StatelessWidget {
+  const RankingBox({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 12, bottom: 20),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(
+            sigmaX: 10,
+            sigmaY: 10,
+          ),
+          child: Container(
+            width: double.infinity,
+            height: 340,
+            color: Colors.white.withOpacity(.1),
+            child: const CustomRankingListView(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomRankingListView extends StatelessWidget {
+  const CustomRankingListView({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            '1',
-            style: Styles.style14W400,
-          ),
-          const SizedBox(width: 6),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(9),
-            child: Image.asset(
-              'assets/images/music.jpg',
-              width: 39.6,
-              height: 39.6,
-              fit: BoxFit.fill,
-            ),
-          ),
-          const SizedBox(width: 12),
-          Column(
-            children: [
-              Text(
-                'Azumi',
-                style: Styles.style12W600.copyWith(
-                  fontSize: 15.3,
-                ),
-              ),
-              Text(
-                'view info',
-                style: Styles.style12.copyWith(
-                  color: Colors.grey,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(width: 100),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Row(
-                children: [
-                  Image.asset('assets/images/path1599.png'),
-                  const SizedBox(width: 6),
-                  Text(
-                    '200055.02',
-                    style: Styles.style13.copyWith(
-                      fontSize: 13.5,
-                    ),
-                  )
-                ],
-              ),
-              Text(
-                '3.99%',
-                style: Styles.style12.copyWith(
-                  color: Colors.green,
-                ),
-              ),
-            ],
-          )
-        ],
-      ),
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: 20,
+      itemBuilder: (context, index) {
+        return const CustomRankingCategoryItem();
+      },
     );
   }
 }
