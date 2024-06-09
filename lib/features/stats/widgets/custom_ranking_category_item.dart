@@ -45,7 +45,7 @@ class CustomRankingCategoryItem extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(width: 90),
+          const Spacer(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [

@@ -10,9 +10,9 @@ class RankingBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(9),
         child: BackdropFilter(
           filter: ImageFilter.blur(
             sigmaX: 10,
@@ -20,7 +20,6 @@ class RankingBox extends StatelessWidget {
           ),
           child: Container(
             width: double.infinity,
-            height: 340,
             color: Colors.white.withOpacity(.1),
             child: const CustomRankingListView(),
           ),

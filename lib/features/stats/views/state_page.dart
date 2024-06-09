@@ -9,7 +9,7 @@ class StatsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
+      children:const [
         CustomRankingAndActivity(),
         CustomAllCategory(),
         RankingBox(),
@@ -17,7 +17,3 @@ class StatsPage extends StatelessWidget {
     );
   }
 }
-
-
-
-

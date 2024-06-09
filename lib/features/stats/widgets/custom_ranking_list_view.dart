@@ -11,7 +11,8 @@ class CustomRankingListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: 20,
+      physics:const NeverScrollableScrollPhysics(),
+      itemCount: 10,
       itemBuilder: (context, index) {
         return const CustomRankingCategoryItem();
       },
