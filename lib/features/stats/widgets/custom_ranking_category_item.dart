@@ -4,7 +4,8 @@ import 'package:mini_nft_marketplace_app/features/stats/model/stats_model.dart';
 
 class CustomRankingCategoryItem extends StatelessWidget {
   const CustomRankingCategoryItem({
-    super.key, required this.statsModel,
+    super.key,
+    required this.statsModel,
   });
   final StatsModel statsModel;
 
@@ -15,7 +16,7 @@ class CustomRankingCategoryItem extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            '1',
+            statsModel.id,
             style: Styles.style14W400.copyWith(
               color: Colors.grey,
             ),
@@ -24,7 +25,7 @@ class CustomRankingCategoryItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(9),
             child: Image.asset(
-              'assets/images/music.jpg',
+              statsModel.image,
               width: 39.6,
               height: 39.6,
               fit: BoxFit.fill,
@@ -34,13 +35,13 @@ class CustomRankingCategoryItem extends StatelessWidget {
           Column(
             children: [
               Text(
-                'Azumi',
+                statsModel.title,
                 style: Styles.style12W600.copyWith(
                   fontSize: 15.3,
                 ),
               ),
               Text(
-                'view info',
+                statsModel.subTitle,
                 style: Styles.style12.copyWith(
                   color: Colors.grey,
                 ),
@@ -59,7 +60,7 @@ class CustomRankingCategoryItem extends StatelessWidget {
                   ),
                   const SizedBox(width: 6),
                   Text(
-                    '200055.02',
+                    statsModel.count,
                     style: Styles.style13.copyWith(
                       fontSize: 13.5,
                     ),
@@ -67,9 +68,11 @@ class CustomRankingCategoryItem extends StatelessWidget {
                 ],
               ),
               Text(
-                '3.99%',
+                '${statsModel.percent}%',
                 style: Styles.style12.copyWith(
-                  color: Colors.green,
+                  color: double.parse(statsModel.percent) > 0
+                      ? Colors.green
+                      : Colors.red,
                 ),
               ),
             ],
