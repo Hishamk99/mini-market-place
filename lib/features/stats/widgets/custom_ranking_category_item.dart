@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_app/core/resources/styles.dart';
+import 'package:mini_nft_marketplace_app/features/stats/model/stats_model.dart';
 
 class CustomRankingCategoryItem extends StatelessWidget {
   const CustomRankingCategoryItem({
-    super.key,
+    super.key, required this.statsModel,
   });
+  final StatsModel statsModel;
 
   @override
   Widget build(BuildContext context) {
