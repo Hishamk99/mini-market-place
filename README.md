@@ -2,6 +2,7 @@
 
 A new Flutter project.
 
+design of project at figma: https://www.figma.com/design/D2J9Jb4DMHnmgmXQ01FXH8/NFT-Marketplace?node-id=60-543&t=jdYczx0oKHKMDGy2-0
 ## Getting Started
 
 This project is a starting point for a Flutter application.
